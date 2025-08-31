@@ -111,7 +111,7 @@ body {
   10%  { opacity: 1; }
   100% { left: 150%; opacity: 0; }
 }
-/* 모션 축소 환경 배려 */
+/* Motion reduction environment consideration */
 @media (prefers-reduced-motion: reduce) {
   .shiny:hover::after { animation: none; }
 }
