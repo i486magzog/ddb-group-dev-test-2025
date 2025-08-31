@@ -149,7 +149,7 @@ function Card({ children, isPopin, edge, isRandomPopin, delay}: CardProps) {
       <motion.div 
         style={card} 
         variants={cardVariants}
-        className="card"
+        className="card scale-[1.2]"
       >
         {children}
       </motion.div>

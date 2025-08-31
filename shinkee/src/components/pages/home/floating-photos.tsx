@@ -47,7 +47,7 @@ export default function FloatingPhotos() {
           alt="kid" 
           width={500} 
           height={500}
-          className="w-full h-full object-cover"
+          className="w-full h-full object-contain"
         />  
       </EdgePopin>
     }
@@ -57,14 +57,14 @@ export default function FloatingPhotos() {
         edge="left" 
         distanceFromMiddle={0} 
         isPopin={isPopin}
-        className="h-[450px] w-[450px] rotate-[50deg] scale-140 translate-x-[-300px]"
+        className="h-[450px] w-[450px] rotate-[50deg] scale-150 translate-x-[-350px]"
       >
         <Image 
           src="/home/kid4.png" 
           alt="kid" 
           width={450} 
           height={500}
-          className="w-full h-full object-cover"
+          className="w-full h-full object-contain"
         />
       </EdgePopin>
     }
@@ -82,7 +82,7 @@ export default function FloatingPhotos() {
         alt="kid" 
         width={500} 
         height={500}
-        className="w-full h-full object-cover"
+        className="w-full h-full object-contain"
       />
     </EdgePopin>
 
@@ -99,7 +99,7 @@ export default function FloatingPhotos() {
         alt="kid" 
         width={500} 
         height={500}
-        className="w-full h-full object-cover"
+        className="w-full h-full object-contain"
       />
     </EdgePopin>
 
@@ -114,7 +114,7 @@ export default function FloatingPhotos() {
         alt="kid" 
         width={500} 
         height={500}
-        className="w-full h-full object-cover"
+        className="w-full h-full object-contain"
       />
     </EdgePopin>
   </div>
