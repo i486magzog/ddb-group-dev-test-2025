@@ -1,26 +1,117 @@
+
 @import "tailwindcss";
 
+/* Light Theme */
 :root {
-  --background: #ffffff;
+  --size-max-width-root: 100vw;
+  --background: #FFFFFF; /* #E1C2EB; */
   --foreground: #171717;
+  --bg-nav: #FFFFFF;
+  --bg-nav-border: #f8f4f4;
+  --bg-text-menu: rgba(38, 38, 38, .5);
+  --bg-text-menu-current: #262626;
+  --bg-btn-menu: #FFFFFF;
+  --bg-btn-menu-current: #f8f4f4;
+}
+
+/* Dark Theme */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #232323;
+    --foreground: #ededed;
+    --bg-nav: #262626;
+    --bg-nav-border: #262626;
+    --bg-text-menu: rgba(255, 255, 255, .5);
+    --bg-text-menu-current: #FFFFFF;
+    --bg-btn-menu: #262626;
+    --bg-btn-menu-current: #232323;
+  }
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-nav: var(--bg-nav);
+  --color-nav-border: var(--bg-nav-border);
+  --color-color-menu: var(--bg-text-menu);
+  --color-color-menu-current: var(--bg-text-menu-current);
+  --color-btn-menu: var(--bg-btn-menu);
+  --color-btn-menu-current: var(--bg-btn-menu-current);
+  /* Layout */
+  --max-width-root: var(--size-max-width-root);
+  /* Font */
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
+  --breakpoint-xs: 500px;
+} 
 
-@media (prefers-color-scheme: dark) {
+@media (width >= 48rem) { /* 768px */
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --size-max-width-root: 1600px;
   }
 }
 
+/* Text */
+@utility text-header1 {
+  @apply text-4xl md:text-5xl font-bold;
+}
+@utility text-header2 {
+  @apply text-2xl md:text-3xl font-bold;
+}
+@utility text-header3 {
+  @apply text-xl md:text-2xl font-bold;
+}
+@utility text-body-lg {
+  @apply text-lg font-bold;
+}
+@utility text-body-base {
+  @apply text-base;
+}
+@utility text-body-sm {
+  @apply text-sm;
+}
+
+html, body { height: auto; min-height: 100%; }
 body {
+  min-height: 100dvh;          /* iOS 주소창 높이 이슈 회피 */
+  display: flex;
+  flex-direction: column;
+
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+/* Shiny Photo Effect  */
+.shiny {
+  position: relative;
+  overflow: hidden;           /* 번쩍 레이어 잘라내기 */
+}
+.shiny::after {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 -50%;       /* 왼쪽 밖에서 시작 */
+  width: 40%;
+  transform: skewX(-20deg);
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(255,255,255,0.85) 50%,
+    transparent 100%
+  );
+  opacity: 0;
+}
+.shiny:hover::after {
+  animation: shine .6s ease;
+}
+@keyframes shine {
+  0%   { left: -50%; opacity: 0; }
+  10%  { opacity: 1; }
+  100% { left: 150%; opacity: 0; }
+}
+/* 모션 축소 환경 배려 */
+@media (prefers-reduced-motion: reduce) {
+  .shiny:hover::after { animation: none; }
 }
