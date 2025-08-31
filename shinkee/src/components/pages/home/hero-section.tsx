@@ -19,7 +19,7 @@ export default function Hero() {
         TODO: Add Slider Component in the future.
       */}
       <div className={cn(
-        "relative flex items-start justify-start h-full w-full p-12 bg-[#E6F3FA] rounded-2xl",
+        "relative flex items-start justify-start h-full w-full p-4 md:p-12 bg-[#E6F3FA] rounded-2xl",
         "dark:bg-transparent dark:border dark:border-[#161616]",
       )}>
         {/* Right in Slider */}
@@ -38,14 +38,14 @@ export default function Hero() {
           <TextH3>Lorem ipsum dolor sit amet.</TextH3>
           <TextH1>Lorem ipsum dolor sit amet consectetur.</TextH1>
           <TextBodyBase className="w-[80%]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dignissim massa diam elementum.</TextBodyBase>
-          <ButtonHero label="LOREM IPSUM" className="w-[150px]" />
+          <ButtonHero label="LOREM IPSUM" className="w-[140px] md:w-[150px] text-sm md:text-base" />
         </div>
       </div>
     </div>
 
     {/* Right Top Row */}
     <div className={cn(
-      "relative flex flex-col gap-8 justify-between w-full p-12 bg-[#EEF5E5] rounded-2xl",
+      "relative flex flex-col gap-8 justify-between w-full p-4 md:p-12 bg-[#EEF5E5] rounded-2xl",
       "bg-[url('/toy/toy2.png')] bg-no-repeat bg-[length:50%] bg-right ", // Background Image
       "dark:bg-transparent dark:border dark:border-[#161616]",
       "md:col-start-8 md:col-span-5 md:row-[1/1]",
@@ -57,7 +57,7 @@ export default function Hero() {
 
     {/* Right Bottom Row */}
     <div className={cn(
-      "relative flex flex-col gap-8 justify-start p-12 bg-[#F9EBE7] rounded-2xl",
+      "relative flex flex-col gap-8 justify-start p-4 md:p-12 bg-[#F9EBE7] rounded-2xl",
       "bg-[url('/toy/toy1.png')] bg-no-repeat bg-[length:45%] bg-[position:right_10px_center]",
       "dark:bg-transparent dark:border dark:border-[#161616]",
       "md:col-start-8 md:col-span-5 md:row-[2/2]",
