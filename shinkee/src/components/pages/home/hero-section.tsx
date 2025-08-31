@@ -23,13 +23,13 @@ export default function Hero() {
         "dark:bg-transparent dark:border dark:border-[#161616]",
       )}>
         {/* Right in Slider */}
-        <div className={cn("absolute right-[-20%] md:right-[-25%] bottom-[10%] w-[90%] flex items-center justify-center",)}>
+        <div className={cn("absolute right-[-20%] md:right-[-20%] bottom-[0%] w-[90%] flex items-center justify-center",)}>
           <Image  
-            src="/gallery/13.png"
+            src="/toy/toy6.png"
             alt=""
             width={500}
             height={1000}
-            className="object-cover scale-150"
+            className="object-cover w-[80%] md:w-[60%] scale-x-[-1]"
           />
         </div>
 
