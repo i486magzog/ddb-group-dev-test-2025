@@ -1,4 +1,7 @@
 This project is a Next.js application for DDB Group's technical test.
+* Dark and Light mode are available.
+
+<br/>
 
 ## Setup Instructions
 ```bash
