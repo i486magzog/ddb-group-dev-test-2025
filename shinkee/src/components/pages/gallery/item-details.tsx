@@ -23,7 +23,7 @@ export function ItemDetails({ item }: { item: Item }) {
           <Image 
             src={item.image ?? ''}
             alt={item.name} 
-            className="h-auto w-full object-cover border-2 border-zinc-200 dark:border-zinc-800 rounded-2xl" 
+            className="h-auto w-full object-cover border-2 border-zinc-200 dark:border-zinc-800 rounded-t-2xl" 
             width={1536} 
             height={1024}
             priority
