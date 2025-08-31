@@ -1,9 +1,21 @@
+'use client'
+
 import { Logo } from "./nav-bar/header"
 import { TextBodyBase, TextH3 } from "../ui/texts"
 import { Button } from "@headlessui/react"
 import { cn } from "@/lib/helper"
+import { useEffect, useState } from "react"
 
 export default function Footer() {
+
+  const [isClient, setIsClient] = useState(false)
+
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
+
+  if(!isClient) return null
+
   return (
     <footer className={cn("grid max-w-root mx-auto my-10 items-start justify-between",
       "grid-cols-1",

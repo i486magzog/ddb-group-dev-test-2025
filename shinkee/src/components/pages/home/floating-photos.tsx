@@ -90,8 +90,8 @@ export default function FloatingPhotos() {
       edge="bottom" 
       distanceFromMiddle={100} 
       isPopin={isPopin}
-      className={cn("h-[400px] scale-80 ml-[-40px]",
-        "md:h-[500px] md:scale-120 md:ml-0"
+      className={cn("h-[400px] scale-80 ml-[-40px] mb-[-50px]",
+        "md:h-[500px] md:scale-120 md:ml-0 md:mb-0"
       )}
     >
       <Image 
