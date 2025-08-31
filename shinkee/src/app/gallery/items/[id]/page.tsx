@@ -5,7 +5,7 @@ import type { Item } from '@/lib/types'
 import { Suspense } from 'react'
 import { ItemDetails } from '../../../../components/pages/gallery/item-details'
 
-export default function ItemDetail({ params }: { params: { id: string } }) {
+export default function ItemDetailsPage({ params }: { params: { id: string } }) {
   const item = findById(params.id)
   if (!item) return notFound()
 
