@@ -3,21 +3,42 @@
 import Link from 'next/link'
 import type { Item } from '@/lib/types'
 import Image from 'next/image'
+import { useState, useEffect } from 'react'
+import { cn } from '@/lib/helper'
+import { LoadingImage, ErrorImage } from './loading-spinner'
 
 export default function ItemCard({ item }: { item: Item }) {
+  const [loaded, setLoaded] = useState(false)
+  const [errored, setErrored] = useState(false)
+
+  useEffect(() => {
+    console.log('loaded', loaded)
+    console.log('errored', errored)
+  }, [loaded, errored])
+
   return (
-    <article className="relative group overflow-hidden rounded-2xl bg-gray-100 transition dark:bg-zinc-900">
+    <article className="relative group overflow-hidden rounded-2xl bg-gray-100 transition dark:bg-transparent">
       <Link href={`/gallery/items/${item.id}`}
         className="block shiny">
         
-        <Image 
-          src={item.image ?? ''} 
-          alt={item.name} 
-          className="h-100 w-full object-cover" 
-          width={600} height={400} 
-        />
+        {!loaded && !errored && <LoadingImage />}
+        {errored && <ErrorImage />}
+        {!errored && (
+          <Image 
+            src={item.image ?? ''} 
+            alt={item.name} 
+            className="h-100 w-full object-cover bg-transparent border-1 border-zinc-200 dark:border-zinc-800 rounded-2xl"
+            width={600} height={400} 
+            priority
+            fetchPriority="high"
+            onLoadingComplete={() => setLoaded(true)}
+            onError={() => setErrored(true)}
+          />
+        )}
 
-        <div className="absolute inset-0 z-10 flex items-end bg-black/0 opacity-0 transition-opacity duration-300 group-hover:bg-black/60 group-hover:opacity-100">
+        <div style={{ display: loaded ? 'flex' : 'none' }} 
+          className="absolute inset-0 z-10 flex items-end bg-black/0 opacity-0 transition-opacity duration-300 group-hover:bg-black/60 group-hover:opacity-100"
+        >
           <div className="w-full p-4 text-white pointer-events-none">
             <h3 className="text-base font-semibold">{item.name}</h3>
             <p className="mt-1 text-sm opacity-90">{item.group ?? '—'}</p>
