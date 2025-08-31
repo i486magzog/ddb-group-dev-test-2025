@@ -14,10 +14,10 @@ npm run dev
 
 <br/>
 
-
 ## Extra Points
 - [x] Thoughtful loading states (skeletons/spinners) and error boundaries.
-  
+  > Spinners are used for loading images on the gallery page.
+
   > If you want to check the error boundary and skeletons, (one of the way is to) comment out the below code in the next.config.ts file. <br/> And then move to /gallery page. Reload the page.
 
   ```ts
