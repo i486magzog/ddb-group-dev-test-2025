@@ -3,7 +3,7 @@
 import { AnimatePresence, LayoutGroup, MotionConfig } from 'framer-motion'
 import * as React from 'react'
 
-export function Providers({ children }: { children: React.ReactNode }) {
+export function ReducedMotionProvider({ children }: { children: React.ReactNode }) {
   return (
     <MotionConfig reducedMotion="user">
       {/* LayoutGroup enables shared‑element transitions via layoutId across routes */}
