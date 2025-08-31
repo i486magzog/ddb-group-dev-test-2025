@@ -23,13 +23,13 @@ export default function Hero() {
         "dark:bg-transparent dark:border dark:border-[#161616]",
       )}>
         {/* Right in Slider */}
-        <div className={cn("absolute right-[-20%] md:right-[-20%] bottom-[0%] w-[90%] flex items-center justify-center",)}>
+        <div className={cn("absolute right-[-20%] md:right-[-20%] bottom-[5%] w-[90%] flex items-center justify-center",)}>
           <Image  
             src="/toy/toy6.png"
             alt=""
             width={500}
             height={1000}
-            className="object-cover w-[80%] md:w-[60%] scale-x-[-1]"
+            className="object-cover w-[50%] md:w-[60%] scale-x-[-1]"
           />
         </div>
 
@@ -46,9 +46,9 @@ export default function Hero() {
     {/* Right Top Row */}
     <div className={cn(
       "relative flex flex-col gap-8 justify-between w-full p-4 md:p-12 bg-[#EEF5E5] rounded-2xl",
-      "bg-[url('/toy/toy2.png')] bg-no-repeat bg-[length:50%] bg-right ", // Background Image
+      "bg-[url('/toy/toy2.png')] bg-no-repeat bg-[length:auto_100%] bg-right ", // Background Image
       "dark:bg-transparent dark:border dark:border-[#161616]",
-      "md:col-start-8 md:col-span-5 md:row-[1/1]",
+      "md:col-start-8 md:col-span-5 md:row-[1/1] md:bg-[length:50%] md:bg-[position:right_10px_bottom]",
     )}>
       <TextH3>Lorem ipsum.</TextH3>        
       <TextH2>Lorem ipsum <br/> dolor sit amet.</TextH2>
@@ -58,9 +58,9 @@ export default function Hero() {
     {/* Right Bottom Row */}
     <div className={cn(
       "relative flex flex-col gap-8 justify-start p-4 md:p-12 bg-[#F9EBE7] rounded-2xl",
-      "bg-[url('/toy/toy1.png')] bg-no-repeat bg-[length:45%] bg-[position:right_10px_center]",
+      "bg-[url('/toy/toy1.png')] bg-no-repeat bg-[length:auto_80%] bg-[position:right_10px_center]",
       "dark:bg-transparent dark:border dark:border-[#161616]",
-      "md:col-start-8 md:col-span-5 md:row-[2/2]",
+      "md:col-start-8 md:col-span-5 md:row-[2/2] md:bg-[length:45%] md:bg-[position:right_10px_bottom_10px]",
     )}>
       <TextH3>Lorem ipsum.</TextH3>
         
