@@ -19,12 +19,12 @@
   :root {
     --background: #232323;
     --foreground: #ededed;
-    --bg-nav: #262626;
-    --bg-nav-border: #262626;
+    --bg-nav: #232323;
+    --bg-nav-border: #161616;
     --bg-text-menu: rgba(255, 255, 255, .5);
     --bg-text-menu-current: #FFFFFF;
-    --bg-btn-menu: #262626;
-    --bg-btn-menu-current: #232323;
+    --bg-btn-menu: "transparent";
+    --bg-btn-menu-current: #333;
   }
 }
 

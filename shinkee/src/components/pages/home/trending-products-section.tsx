@@ -77,16 +77,18 @@ export default function TrendingProductsSection({title}: {title: string}) {
   
   return <div className="py-10">
 
-    <div className="flex flex-row items-center justify-between py-4 border-b-1 border-[#eeeeee]">
+    <div className="flex flex-row items-center justify-between py-4 border-b-1 border-[#eeeeee] dark:border-[#555]">
       <TextH2 className="w-[30%] md:w-[50%]">{title}</TextH2>
       
       <div className="flex flex-row items-center gap-2">
         {["ALL", "LOREM IPSUM", "DOLOR SIT"].map((item, index) => (
           <Button 
             key={index}
-            className={cn("px-2 py-2 text-[#666666] text-sm md:text-base border-b-3 border-transparent",
-              currentCategory === item && "border-b-orange-300 text-black",
+            className={cn(
+              "px-2 py-2 text-[#666666] text-sm md:text-base border-b-3 border-transparent",
+              currentCategory === item && "border-b-orange-300 text-black dark:text-white",
               "hover:cursor-pointer hover:text-black", 
+              "dark:text-[#999] dark:hover:text-white",
             )}
             onClick={() => setCurrentCategory(item)}
           >
@@ -120,10 +122,12 @@ const TrendingProductCard = ({ title, price, text, src }: { title: string, price
   const [count, setCount] = useState(1);
 
   return (
-    <div className={cn("flex flex-col items-center justify-start rounded-2xl w-auto bg-[#ffffff] hover:cursor-pointer p-4",
-      "shadow-xl shadow-gray-200"
+    <div className={cn(
+      "flex flex-col items-center justify-start rounded-2xl w-auto bg-[#ffffff] hover:cursor-pointer p-4",
+      "shadow-xl shadow-gray-200",
+      "dark:bg-transparent dark:border dark:border-[#161616] dark:shadow-none dark:hover:drop-shadow-none",
     )}>
-      <div className="shiny flex items-center justify-center w-full h-[200px] bg-[#efefef] rounded-xl">
+      <div className="shiny flex items-center justify-center w-full h-[200px] bg-[#efefef] dark:bg-[#333] rounded-xl">
         <Image src={src} alt="" width={200} height={200} className="w-40" />
       </div>
 
@@ -134,9 +138,9 @@ const TrendingProductCard = ({ title, price, text, src }: { title: string, price
         
         <div className="flex flex-row items-center justify-between gap-2 w-full mt-2">
           <div className="flex flex-row items-center gap-2">
-            <Button className="items-center rounded-md bg-[#eeeeee] text-2xl shadow-white/10 w-8 h-8 hover:cursor-pointer" onClick={() => setCount(count - 1)}>-</Button>
+            <Button className="items-center rounded-md bg-[#eeeeee] dark:bg-[#333] text-2xl shadow-white/10 w-8 h-8 hover:cursor-pointer" onClick={() => setCount(count - 1)}>-</Button>
             <TextBodyBase>{count}</TextBodyBase>
-            <Button className="items-center rounded-md bg-[#eeeeee] text-2xl shadow-white/10 w-8 h-8 hover:cursor-pointer" onClick={() => setCount(count + 1)}>+</Button>
+            <Button className="items-center rounded-md bg-[#eeeeee] dark:bg-[#333] text-2xl shadow-white/10 w-8 h-8 hover:cursor-pointer" onClick={() => setCount(count + 1)}>+</Button>
           </div>
           <TextBodyBase className="text-[#aaaaaa]">Add to Cart</TextBodyBase>
         </div>

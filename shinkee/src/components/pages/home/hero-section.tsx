@@ -14,10 +14,13 @@ export default function Hero() {
       "overflow-hidden col-[1/1]",
       "md:col-span-7 md:row-span-2 md:justify-stretch md:items-stretch md:justify-items-stretch",
     )}>
-      {/* Slider Container */}
+      {/* 
+        Slider Container
+        TODO: Add Slider Component in the future.
+      */}
       <div className={cn(
         "relative flex items-start justify-start h-full w-full p-12 bg-[#E6F3FA] rounded-2xl",
-        "",
+        "dark:bg-transparent dark:border dark:border-[#161616]",
       )}>
         {/* Right in Slider */}
         <div className={cn("absolute right-[-20%] md:right-[-25%] bottom-[10%] w-[90%] flex items-center justify-center",)}>
@@ -44,6 +47,7 @@ export default function Hero() {
     <div className={cn(
       "relative flex flex-col gap-8 justify-between w-full p-12 bg-[#EEF5E5] rounded-2xl",
       "bg-[url('/toy/toy2.png')] bg-no-repeat bg-[length:50%] bg-right ", // Background Image
+      "dark:bg-transparent dark:border dark:border-[#161616]",
       "md:col-start-8 md:col-span-5 md:row-[1/1]",
     )}>
       <TextH3>Lorem ipsum.</TextH3>        
@@ -55,6 +59,7 @@ export default function Hero() {
     <div className={cn(
       "relative flex flex-col gap-8 justify-start p-12 bg-[#F9EBE7] rounded-2xl",
       "bg-[url('/toy/toy1.png')] bg-no-repeat bg-[length:45%] bg-[position:right_10px_center]",
+      "dark:bg-transparent dark:border dark:border-[#161616]",
       "md:col-start-8 md:col-span-5 md:row-[2/2]",
     )}>
       <TextH3>Lorem ipsum.</TextH3>

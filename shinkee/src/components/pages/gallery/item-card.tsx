@@ -41,7 +41,7 @@ export default function ItemCard({ item }: { item: Item }) {
 
 export function SkeletonCard() {
   return (
-    <div className="animate-pulse border border-zinc-200 rounded-2xl bg-white/40 p-4 dark:bg-zinc-900/50">
+    <div className="animate-pulse border border-zinc-200 dark:border-zinc-800 rounded-2xl bg-white/40 p-4 dark:bg-zinc-900/50">
       <div className="h-100 w-full rounded-xl bg-zinc-200 dark:bg-zinc-800" />
       <div className="mt-4 h-4 w-2/3 rounded bg-zinc-200 dark:bg-zinc-800" />
       <div className="mt-2 h-3 w-1/3 rounded bg-zinc-200 dark:bg-zinc-800" />

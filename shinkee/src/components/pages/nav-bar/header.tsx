@@ -132,7 +132,7 @@ const NotificationButton = () => {
   return (
     <button
       type="button"
-      className="relative rounded-full p-1 text-gray-400 hover:text-black focus:outline-2 focus:outline-offset-2 focus:outline-indigo-500 hover:cursor-pointer"
+      className="relative rounded-full p-1 text-gray-400 hover:text-black dark:hover:text-white focus:outline-2 focus:outline-offset-2 focus:outline-indigo-500 hover:cursor-pointer"
     >
       <span className="absolute -inset-1.5" />
       <span className="sr-only">View notifications</span>

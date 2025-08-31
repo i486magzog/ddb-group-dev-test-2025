@@ -16,7 +16,7 @@ export default function Pagination({ total, page, pageSize }: { total: number; p
       
       <Link className={cn(
           "rounded-lg px-3 py-1.5 text-sm opacity-80",
-          "hover:opacity-100 hover:text-black"
+          "hover:opacity-100 hover:text-black dark:hover:text-white"
         )}
         href={makeHref(Math.max(1, page - 1))}
         aria-disabled={page === 1}
@@ -44,7 +44,7 @@ export default function Pagination({ total, page, pageSize }: { total: number; p
       
       <Link className={cn(
           "rounded-lg px-3 py-1.5 text-sm opacity-80",
-          "hover:opacity-100 hover:text-black"
+          "hover:opacity-100 hover:text-black dark:hover:text-white"
         )}
         href={makeHref(Math.min(pageCount, page + 1))}
         aria-disabled={page === pageCount}

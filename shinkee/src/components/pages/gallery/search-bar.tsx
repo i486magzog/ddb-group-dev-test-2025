@@ -31,9 +31,10 @@ export default function SearchBar() {
         value={searchValue}
         onChange={(e) => setSearchValue(e.target.value)}
         placeholder="Search by name, group, tag..."
-        className={cn("flex-1 rounded-l-xl bg-gray-200 text-gray-900 px-6 py-2",
+        className={cn(
+          "flex-1 rounded-l-xl bg-gray-200 text-gray-900 px-6 py-2",
           "focus:outline-none focus:ring-zinc-400",
-          "dark:bg-zinc-900"
+          "dark:bg-zinc-900 dark:text-white"
         )}
         aria-label="Search"
       />

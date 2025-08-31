@@ -37,10 +37,10 @@ export default function BrandsSection() {
       <div className="flex flex-row items-center gap-2">
         <TextBodyLg>View All Brands</TextBodyLg>
         <ArrowLongRightIcon className="w-5 h-5" />
-        <Button className="inline-flex items-center gap-2 rounded-md bg-[#eeeeee] px-2 py-2 text-sm/6 font-semibold text-[#999] data-hover:bg-gray-600 data-open:bg-gray-700 hover:cursor-pointer">
+        <Button className="inline-flex items-center gap-2 rounded-md bg-[#eeeeee] dark:bg-[#333] px-2 py-2 text-sm/6 font-semibold text-[#999] data-hover:bg-gray-600 data-open:bg-gray-700 hover:cursor-pointer">
           <ChevronLeftIcon className="w-5 h-5" />
         </Button>
-        <Button className="inline-flex items-center gap-2 rounded-md bg-[#eeeeee] px-2 py-2 text-sm/6 font-semibold text-[#999] data-hover:bg-gray-600 data-open:bg-gray-700 hover:cursor-pointer">
+        <Button className="inline-flex items-center gap-2 rounded-md bg-[#eeeeee] dark:bg-[#333] px-2 py-2 text-sm/6 font-semibold text-[#999] data-hover:bg-gray-600 data-open:bg-gray-700 hover:cursor-pointer">
           <ChevronRightIcon className="w-5 h-5" />
         </Button>
       </div>
@@ -60,10 +60,11 @@ const BrandCard = ({ title, text, src }: { title: string, text: string, src: str
     className={cn("flex flex-row items-center justify-start rounded-2xl w-auto bg-[#ffffff] hover:cursor-pointer p-4",
       "shadow-xl",
       "hover:cursor-pointer hover:drop-shadow-xl hover:translate-y-[-10px] duration-[.5s]",
+      "dark:bg-transparent dark:border dark:border-[#161616]",
       "md:hover:translate-y-[-15px]"
     )}
   >
-    <div className="flex items-center justify-center w-[200px] h-[100px] bg-[#eeeeee] rounded-xl">
+    <div className="flex items-center justify-center w-[200px] h-[100px] bg-[#eeeeee] dark:bg-[#333] rounded-xl">
       <Image src={src} alt="" width={200} height={200} className="w-20" />
     </div>
 

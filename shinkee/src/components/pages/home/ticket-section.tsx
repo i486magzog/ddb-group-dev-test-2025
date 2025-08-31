@@ -14,12 +14,11 @@ export default function TicketSection() {
       "overflow-hidden",
       "md:col-span-6 md:justify-stretch md:items-stretch md:justify-items-stretch",
     )}>
-      {/* Slider Container */}
       <div className={cn(
         "relative flex items-start justify-start h-full w-full p-12 bg-[#E6F3FA] rounded-2xl",
-        "",
+        "dark:bg-transparent dark:border dark:border-[#161616]",
       )}>
-        {/* Left in Slider */}
+        {/* Left in Container */}
         <div className={cn("relative flex flex-col gap-8 justify-center w-[70%]",)}>
           <TextH3>Lorem ipsum dolor sit amet.</TextH3>
           <TextH1>Lorem ipsum dolor sit amet consectetur.</TextH1>
@@ -27,7 +26,7 @@ export default function TicketSection() {
           <ButtonHero label="LOREM IPSUM" className="w-[150px] hover:bg-[#999] hover:text-white hover:border-0" />
         </div>
 
-        {/* Right in Slider */}
+        {/* Right in Container */}
         <div className={cn("absolute flex items-center justify-center",
           "right-[-25%] bottom-[-10%] w-[90%]",
           "md:right-[-30%] md:bottom-[-10%] md:w-[90%]"
@@ -51,9 +50,9 @@ export default function TicketSection() {
       {/* Slider Container */}
       <div className={cn(
         "relative flex items-start justify-start h-full w-full p-12 bg-[#E6F3FA] rounded-2xl",
-        "",
+        "dark:bg-transparent dark:border dark:border-[#161616]",
       )}>
-        {/* Left in Slider */}
+        {/* Left in container */}
         <div className={cn("relative flex flex-col gap-8 justify-center w-[70%]",)}>
           <TextH3>Lorem ipsum dolor sit amet.</TextH3>
           <TextH1>Lorem ipsum dolor sit amet consectetur.</TextH1>
@@ -61,7 +60,7 @@ export default function TicketSection() {
           <ButtonHero label="LOREM IPSUM" className="w-[150px] hover:bg-[#999] hover:text-white hover:border-0" />
         </div>
 
-        {/* Right in Slider */}
+        {/* Right in container */}
         <div className={cn("absolute flex items-center justify-center",
           "right-[-20%] bottom-[-10%] w-[90%]",
           "md:right-[-30%] md:bottom-[-10%] md:w-[90%]"

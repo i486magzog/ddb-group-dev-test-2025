@@ -40,10 +40,10 @@ export default function CategorySection() {
       <div className="flex flex-row items-center gap-2">
         <TextBodyLg>View ALL Categories</TextBodyLg>
         <ArrowLongRightIcon className="w-5 h-5" />
-        <Button className="inline-flex items-center gap-2 rounded-md bg-[#eeeeee] px-2 py-2 text-sm/6 font-semibold text-[#999] data-hover:bg-gray-600 data-open:bg-gray-700 hover:cursor-pointer">
+        <Button className="inline-flex items-center gap-2 rounded-md bg-[#eeeeee] dark:bg-[#333] px-2 py-2 text-sm/6 font-semibold text-[#999] data-hover:bg-gray-600 data-open:bg-gray-700 hover:cursor-pointer">
           <ChevronLeftIcon className="w-5 h-5" />
         </Button>
-        <Button className="inline-flex items-center gap-2 rounded-md bg-[#eeeeee] px-2 py-2 text-sm/6 font-semibold text-[#999] data-hover:bg-gray-600 data-open:bg-gray-700 hover:cursor-pointer">
+        <Button className="inline-flex items-center gap-2 rounded-md bg-[#eeeeee] dark:bg-[#333] px-2 py-2 text-sm/6 font-semibold text-[#999] data-hover:bg-gray-600 data-open:bg-gray-700 hover:cursor-pointer">
           <ChevronRightIcon className="w-5 h-5" />
         </Button>
       </div>
@@ -60,9 +60,10 @@ export default function CategorySection() {
 
 const CategoryCard = ({ title, icon }: { title: string, icon: React.ReactNode }) => {
   return <div
-    className={cn("flex flex-col items-center justify-center rounded-2xl w-auto h-[230px] bg-[#ffffff]",
+    className={cn("flex flex-col items-center justify-center rounded-2xl w-auto h-[230px] bg-[#ffffff] gap-4",
       "shadow-xl shadow-gray-100 text-center", 
       "hover:cursor-pointer hover:drop-shadow-xl hover:translate-y-[-10px] duration-[.5s]",
+      "dark:bg-transparent dark:border dark:border-[#161616] dark:shadow-none dark:hover:drop-shadow-none",
       "md:hover:translate-y-[-20px]"
     )}
   >
